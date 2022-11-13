@@ -16,3 +16,31 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.countdown{
+  font-family: 'Share Tech Mono', monospace;
+    color: #daf6ff;
+    text-shadow: 0 0 20px rgba(10, 175, 230, 1), 0 0 20px rgba(10, 175, 230, 0);
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+ }
+ .timer{
+  margin-top: 300px;
+  display: flex;
+  justify-content: space-evenly;
+
+ }
+ .field{
+  letter-spacing: 0.05em;
+    font-size: 50px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.800);
+  width: 250px;
+  flex-direction: column;
+  border-radius: 15px;
+ }
+ 
+ #count_timer{
+  background-color: RGB(149, 82, 81);
+  }

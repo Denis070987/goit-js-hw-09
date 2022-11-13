@@ -10,8 +10,7 @@ const timerValue = {
   minutes: document.querySelector('[data-minutes]'),
   seconds: document.querySelector('[data-seconds]'),
 }
-  console.log(timerValue)
-
+  
 const options = {
   enableTime: true,
   time_24hr: true,
@@ -20,7 +19,6 @@ const options = {
   onClose(selectedDates) {
     console.log(selectedDates[0]);
     let presDate = new Date();
-    // console.log(presDate);
     if(selectedDates[0] < presDate) {
       window.alert("Please choose a date in the future");
       startBtn.setAttribute('disabled', true);
@@ -33,11 +31,10 @@ const options = {
 };
 
 function chooseTimerValue() {
-  
   let timer = setInterval(() => {
-  let amountTime = new Date(choiceDate.value) - new Date
+    let amountTime = new Date(choiceDate.value) - new Date;
     if (amountTime > 0) {
-      choiceDate.setAttribute('disabled', true)
+      choiceDate.setAttribute('disabled', true);
       startBtn.setAttribute('disabled', true);
     let timerData = convertMs(amountTime);
         timerValue.days.textContent = timerData.days.toString().padStart(2, '0');
@@ -45,19 +42,11 @@ function chooseTimerValue() {
         timerValue.minutes.textContent = timerData.minutes.toString().padStart(2, '0');
         timerValue.seconds.textContent = timerData.seconds.toString().padStart(2, '0');
     } else { 
-      clearInterval(timer)
+      clearInterval(timer);
+  }}, 1000)
   }
-console.log(amountTime)
-  }, 1000)
-  
-   
-  
-}
  
 flatpickr(choiceDate, options)
-
-
-
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
