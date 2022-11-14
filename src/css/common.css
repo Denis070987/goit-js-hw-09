@@ -35,12 +35,14 @@ img {
   letter-spacing: 0.05em;
     font-size: 50px;
   display: flex;
-  background-color: rgba(0, 0, 0, 0.800);
   width: 250px;
   flex-direction: column;
-  border-radius: 15px;
  }
  
- #count_timer{
+ /* #count_timer{
   background-color: RGB(149, 82, 81);
-  }
+  } */
+
+    #count_timer {
+      background-color: rgba(0, 0, 0, 0.89);
+    }
